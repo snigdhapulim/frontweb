@@ -11,7 +11,7 @@ const DoctorsPage: React.FC = () => {
 
   useEffect(() => {
     var patient = {
-      patient_id: 2,
+      patient_id: Math.floor(Math.random()*100) +1,
       first_name: searchParams.get("first_name"),
       last_name: searchParams.get("last_name"),
       date_of_birth: searchParams.get("date_of_birth"),
@@ -43,16 +43,6 @@ const DoctorsPage: React.FC = () => {
       })
       .catch((error) => console.error("Error fetching JSON:", error));
   }, [searchParams]);
-  // This could be fetched from an API or database
-  const doctors = [
-    {
-      first_name: "dsfhg",
-      last_name: "dsjghf",
-      speciality: "dfsghj",
-      location: "Brigton",
-      cost_max: 300,
-    },
-  ];
 
   return (
     <Layout title="Doctors">
