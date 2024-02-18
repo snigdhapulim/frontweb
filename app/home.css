@@ -1,0 +1,88 @@
+.parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+/* Style the container to center the content and apply padding */
+.container {
+  padding: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.1); /* White with 10% opacity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.container:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ); /* 30% visible white background on hover */
+}
+
+/* Style the header */
+header {
+  background-color: #fff;
+  /* Add styles for your navigation bar */
+}
+
+/* Hero section styles */
+.hero {
+  background-color: rgba(255, 255, 255, 0.5); /* Or any other color based on the inspiration image */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Primary button styling */
+.primary-button {
+  background-color: #0061a8; /* A blue that matches the inspiration */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+  background-color: #004d7a; /* Darker blue on hover */
+}
+
+/* Utility classes for margin and padding */
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Text styling */
+.text-5xl {
+  font-size: 3rem; /* Adjust size as needed */
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* Other styles such as navigation links, footer, etc., can be added here */

@@ -8,20 +8,129 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+body {
+  color: rgb(var(--foreground-rgb));
+  /* Added padding to the body for consistent spacing on every page */
+  padding: 2rem;
+  /* Set a minimum height to ensure the full vertical space is utilized */
+  min-height: 100vh;
+  /* Use Flexbox to create a column layout for the content */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Button Styling */
+.button, /* This class can be added to your <button> elements */
+button { /* This styles all <button> elements */
+  /* Use Tailwind's utility classes to apply styling */
+  @apply py-2 px-4 bg-blue-500 hover:bg-blue-700 text-white font-bold rounded transition ease-in-out duration-300;
+}
+
+/* Optionally, if you want to include focus styles for accessibility: */
+.button:focus,
+button:focus {
+  @apply outline-none ring-2 ring-blue-300;
+}
+
+/* If you have specific containers or sections on each page, you can add consistent padding */
+.container {
+  @apply p-4; /* This applies padding on all sides of the container */
+}
+
+/* To apply a consistent box shadow to certain elements */
+.shadowed {
+  @apply shadow-lg;
+}
+
+
+.card-container {
+  min-width: 250px; /* Limit the card size */
+  margin: auto; /* Center the card in the available space */
+  display: flex;
+  flex-direction: column; /* Stack the children vertically */
+  align-items: center; /* Center-align the child elements horizontally */
+  justify-content: center; /* Center-align the child elements vertically */
+  padding: 2rem; /* Add more padding for a better visual */
+  gap: 0.5rem; /* Adds space between child elements */
+  background: white;
+  border-radius: 0.5rem; /* Slightly round the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.card-container:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.image-container {
+  margin-bottom: 1rem; /* Add space below the image */
+}
+
+/* Ensure the image is centered and has a circular mask */
+.image-container img {
+  display: block;
+  border-radius: 50%; /* Make the image round */
+  margin-bottom: 1rem; /* Add space below the image */
+}
+
+h3 {
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 0.5rem; /* Add space below the heading */
+}
+
+p {
+  color: #555; /* Slightly lighter text for contrast */
+  margin-bottom: 0.5rem; /* Add space below the paragraph */
+}
+
+.rating {
+  font-size: 0.875rem; /* Adjust font size for rating */
+  color: #777; /* Lighter text for the rating */
+  margin-bottom: 0.5rem; /* Add space below the rating */
+}
+
+
+.button:hover {
+  background-color: #00408b; /* Darker shade on hover */
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-image: url('/back.webp'); /* Replace with your image path */
+  background-size: cover; /* Cover ensures the image covers the whole area */
+  background-position: center center; /* Centers the image */
+  background-repeat: no-repeat; /* The image will not repeat */
+  background-attachment: fixed; /* The image will not scroll with the page */
+}
+
+
+form.max-w-xl.mx-auto.py-8 {
+  padding: 15px; /* This sets padding for all sides */
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.6); /* White with 10% opacity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 10px;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.page-container{
+  padding: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: rgba(255, 255, 255, 0.5); /* White with 10% opacity */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  padding-bottom: 50px;
+  border-radius: 10px;
 }
