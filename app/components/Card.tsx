@@ -12,7 +12,7 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ index, doctorName, specialty, location, costMax }) => {
   // A placeholder image URL
-  const placeholderImage = '/cute'+index%2+'.jpg';
+  const placeholderImage = './cute'+index%2+'.jpg';
   // Alternatively, if you have a static image in your public directory:
   // const placeholderImage = "/static/default-doctor.jpg";
 
